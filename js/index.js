@@ -13,31 +13,25 @@ let originX     = 0;
 let originY     = 0;
 
 /* ===========================================
-   Khởi tạo sau khi layout đã render xong
 =========================================== */
 
 function initNoBtn() {
 
-    // Đọc vị trí no-btn khi nó vẫn còn trong flex flow
     const btnRect       = noBtn.getBoundingClientRect();
     const containerRect = buttonsEl.getBoundingClientRect();
 
-    // Tọa độ tương đối so với .buttons
     originX = btnRect.left - containerRect.left;
     originY = btnRect.top  - containerRect.top;
 
-    // Cố định kích thước container trước khi no-btn ra khỏi flow
     buttonsEl.style.width     = buttonsEl.offsetWidth  + "px";
     buttonsEl.style.height    = buttonsEl.offsetHeight + "px";
     buttonsEl.style.position  = "relative";
 
-    // Giữ yes-btn đứng yên tại đúng vị trí hiện tại bằng absolute
     const yesBtnRect = yesBtn.getBoundingClientRect();
     yesBtn.style.position = "absolute";
     yesBtn.style.left     = (yesBtnRect.left - containerRect.left) + "px";
     yesBtn.style.top      = (yesBtnRect.top  - containerRect.top)  + "px";
 
-    // Chuyển no-btn sang absolute tại đúng vị trí ban đầu
     noBtn.style.position = "absolute";
     noBtn.style.left     = originX + "px";
     noBtn.style.top      = originY + "px";
@@ -48,7 +42,6 @@ window.addEventListener("load", initNoBtn);
 
 
 /* ===========================================
-   Hover → chạy trốn
 =========================================== */
 
 noBtn.addEventListener("mouseenter", () => {
@@ -79,7 +72,6 @@ document.addEventListener("mousemove", (e) => {
 
 
 /* ===========================================
-   Di chuyển trong bán kính RADIUS quanh origin
 =========================================== */
 
 function moveButton() {
@@ -107,7 +99,6 @@ function moveButton() {
         x = originX + Math.cos(angle) * dist;
         y = originY + Math.sin(angle) * dist;
 
-        // Clamp trong .buttons
         x = Math.min(Math.max(x, 0), containerW - btnW);
         y = Math.min(Math.max(y, 0), containerH - btnH);
 
@@ -133,7 +124,6 @@ function moveButton() {
 
 
 /* ===========================================
-   Đổi text
 =========================================== */
 
 function updateText() {
@@ -150,7 +140,6 @@ function updateText() {
 
 
 /* ===========================================
-   Click đồng ý
 =========================================== */
 
 yesBtn.addEventListener("click", () => {
@@ -162,7 +151,6 @@ yesBtn.addEventListener("click", () => {
 
 
 /* ===========================================
-   Tim bay
 =========================================== */
 
 function createExplosion() {

@@ -14,7 +14,6 @@ const EMAILJS_TEMPLATE_ID = "template_ugctv6k";
 const EMAILJS_PUBLIC_KEY  = "PE0PgIv6_dv65SEAx";
 
 /* ===========================================
-   Không cho chọn ngày quá khứ
 =========================================== */
 
 const today = new Date();
@@ -38,7 +37,6 @@ submitBtn.addEventListener("click", () => {
         return;
     }
 
-    // Lấy món đã chọn (không bắt buộc)
     const foods = [];
 
     document.querySelectorAll(".food-item input:checked").forEach(item => {
@@ -50,7 +48,6 @@ submitBtn.addEventListener("click", () => {
         foods.push(otherFood);
     }
 
-    // Gửi email qua EmailJS
     sendEmail(date, foods);
 
     createExplosion();
@@ -63,7 +60,7 @@ submitBtn.addEventListener("click", () => {
 
 
 /* ===========================================
-   Gửi email qua EmailJS
+   EmailJS
 =========================================== */
 
 function sendEmail(date, foods) {
