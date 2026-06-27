@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>💖 Hẹn hò thoiiiii 💖</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- Background -->
+
+<div class="background">
+
+    <span class="floating floating1">🌸</span>
+    <span class="floating floating2">💖</span>
+    <span class="floating floating3">✨</span>
+    <span class="floating floating4">💕</span>
+    <span class="floating floating5">🩷</span>
+
+</div>
+
+<!-- Main -->
+
+<main class="container">
+
+    <section class="card booking-card">
+
+        <div class="emoji">
+            💌
+        </div>
+
+        <h1>
+            Hẹn hò thoii nào bạn nhỏ~
+        </h1>
+
+        <p class="question">
+            Nếu có thể, em hãy giúp tớ chọn ngày và món ăn em thích nha ❤️
+        </p>
+
+        <!-- Ngày -->
+
+        <div class="form-group">
+
+            <label for="date">
+                📅 Ngày em có thể đi chơi
+            </label>
+
+            <input
+                    type="date"
+                    id="date">
+
+        </div>
+
+        <!-- Đồ ăn -->
+
+        <div class="form-group">
+
+            <label>
+                🍣 Em muốn ăn gì?
+            </label>
+
+            <div class="food-list">
+
+                <label class="food-item">
+
+                    <input
+                            type="checkbox"
+                            value="🍣 Đồ Nhật">
+
+                    <span>🍣 Đồ Nhật</span>
+
+                </label>
+
+                <label class="food-item">
+
+                    <input
+                            type="checkbox"
+                            value="🥟 Đồ Trung">
+
+                    <span>🥟 Đồ Trung</span>
+
+                </label>
+
+                <label class="food-item">
+
+                    <input
+                            type="checkbox"
+                            value="🥩 Đồ nướng / Lẩu">
+
+                    <span>🥩 Đồ nướng / Lẩu</span>
+
+                </label>
+
+                <label class="food-item">
+
+                    <input
+                            type="checkbox"
+                            value="🍜 Bún bò Huế / Bánh bột lọc">
+
+                    <span>🍜 Bún bò Huế / Bánh bột lọc</span>
+
+                </label>
+
+                <label class="food-item">
+
+                    <input
+                            type="checkbox"
+                            value="🧋 Trà sữa / Chè">
+
+                    <span>🧋 Trà sữa / Chè</span>
+
+                </label>
+
+            </div>
+
+        </div>
+
+        <!-- Khác -->
+
+        <div class="form-group">
+
+            <label for="otherFood">
+                ✍️ Hoặc món khác
+            </label>
+
+            <input
+                    type="text"
+                    id="otherFood"
+                    placeholder="Ví dụ: Pizza, Gà rán, Sushi...">
+
+        </div>
+
+        <!-- Submit -->
+
+        <button
+                id="submitBtn"
+                class="btn yes-btn">
+
+            Okay 💕
+
+        </button>
+
+    </section>
+
+</main>
+
+<!-- Popup -->
+
+<div
+        id="popup"
+        class="popup">
+
+    <div class="popup-card">
+
+        <div class="popup-emoji">
+
+            🥰💖
+
+        </div>
+
+        <h2>
+
+            Xin cảm ơn công chúa của tớ !!!
+
+        </h2>
+
+        <div id="popupMessage">
+
+        </div>
+
+        <button
+                id="closePopup"
+                class="btn yes-btn">
+
+            Đóng
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- Heart Animation -->
+
+<div id="heart-container"></div>
+
+<script src="js/booking.js"></script>
+
+</body>
+
+</html>
+
