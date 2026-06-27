@@ -105,7 +105,7 @@ function buildMessage(date, foods) {
         <p>📅 <b>Ngày mình đi chơi</b><br>${formatDate(date)}</p>
         <br>
         ${foodSection}
-        <p>❤️ Tớ đã nhận được rồi, sẽ chuẩn bị thật chu đáo nhé!</p>
+        <p>❤️ Tớ sẽ chuẩn bị và qua đón em nhaaaa!</p>
     `;
 
 }
